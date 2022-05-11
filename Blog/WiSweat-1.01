@@ -1,0 +1,27 @@
+# WiSweat-1.01 (11/05/22)
+## Project Initialization
+
+This blog follows the development process of my WiSweat app that I hope to initially distribute through Trinidad and expand if possible.
+
+### App Description
+
+So what does this web app even do and before that, is this a workout app? Why are we sweating? Great question!
+In Trinidad, a sweat is the same as a pick up game and most of the time you hear "sweat", we're talking about football (soccer). Now that we got that down, lets get to the purpose of the app.
+
+This app was inspired by my frustration with one of my sweat groups. We would coordinate our sweats over WhatsApp but everyone would always ask "who's coming?" which would usually be followed by little to no responses discouraging anyone reading from coming to the sweat. I thought to myself, is there a way to make planning sweats and listing attendance easier? What if I could create a web app that could handle making an app that does this but is simple, minimal and quick enough to warrant using it?
+
+Hence, the WiSweat app! An application that allows a group to add members, quickly initialize a sweat and then allow members to quickly confirm or deny their attendance.
+
+### UI Design
+In building any web application, constructing a design of how it should look helps give structure and direction when the coding begins so before opening Visual Studio Code, I created mock ups of how some of the initial screens should look. [Insert Pictures Here]
+
+### Tech Stack
+This project will be built with the MERN (MongoDB, Express.js, React, Node.js) stack as this is what I'm most familiar with right now as well at its just a popular stack so building my experience with it couldn't hurt. I'll be doing my best to implement good practices and new techniques I learn along the way to make maintaining the app easier long term but I am doing this project for enjoyment so I won't pull my hair out over it (that's a lie and I'll definitely be pulling my hair out so this app looks great)
+
+## Current Progress
+At the start of writing this, I have a little of the UI implemented, mainly the home screen. I intend to code a basic version of the UI then work on the functionality. Working on the home page currently, the intention is to show a logged in user all of the upcoming sweats they are subscribed to and allow them to select their attendance on that page. I am thinking about the database implementation right now and how would I give users a real-time reflection of the database so they know how many people are coming.
+
+In searching around, I found about "change streams" in MongoDB where an application listens for a change in the database and when that change occurs, then it can run logic and update the application. This was actually a really cool discovery because before, the only real-time method I knew about was sockets. The "change streams" method sounds like a good fit so with some more reading I may add a basic implementation of it to see if it solves the problem I have.
+
+### Next Move
+I'll model the data more on paper then fill the Mongo database with dummy information so I can design some of the other pages more before building the pages to create sweat groups and sweats
