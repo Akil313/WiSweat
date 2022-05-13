@@ -1,6 +1,6 @@
 [
     {
-        "id": "1",
+        "_id": "1",
         "sweatName": "Arima Sweat",
         "groupId": "1",
         "time": "7:00pm",
@@ -8,7 +8,7 @@
         "attending": ["1", "3"]
     },
     {
-        "id": "2",
+        "_id": "2",
         "sweatName": "Malabar Ballers",
         "groupId": "2",
         "time": "4:00pm",
@@ -16,7 +16,7 @@
         "attending": ["6", "7"]
     },
     {
-        "id": "3",
+        "_id": "3",
         "sweatName": "UWI Team",
         "groupId": "3",
         "time": "5:30pm",

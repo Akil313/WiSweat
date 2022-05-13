@@ -16,11 +16,11 @@ const SweatTitle = styled.big`
 const SweatBar = ({info}) => {
   return (
     <SweatBarContainer>
-        <SweatTitle>{info.sweatName}</SweatTitle>
-        <p>Attending: {info.attending.length}</p>
-        <p>Time: {info.time}</p>
-        <p>Location: {info.location}</p>
-        <button>Pass</button>
+      <SweatTitle>{info.sweatName}</SweatTitle>
+      <p>Attending: {info.attending.length}</p>
+      <p>Time: {info.time}</p>
+      <p>Location: {info.location}</p>
+      <button>Pass</button>
     </SweatBarContainer>
   )
 }

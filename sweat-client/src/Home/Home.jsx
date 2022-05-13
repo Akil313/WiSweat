@@ -1,8 +1,8 @@
-import React from 'react'
+import React, { useState } from 'react'
 import './Home.css'
 import styled from 'styled-components';
 import SweatBar from './SweatBar/SweatBar'
-import activeSweats from '../Templates/sweats.json'
+import sweatJson from '../Templates/sweats.json'
 
 const HomeContainer = styled.div`
   display: flex;
@@ -19,7 +19,7 @@ const RegSweats = styled.div`
 
 const Home = () => {
 
-
+  const [activeSweats, setActiveSweats] = useState(sweatJson);
 
   return (
     <HomeContainer className='home-main-container'>
