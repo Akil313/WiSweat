@@ -7,6 +7,7 @@ import styled, { ThemeProvider } from "styled-components";
 import { lightTheme, darkTheme, GlobalStyles } from './Contexts/ThemeContext'
 import { SweatProvider } from './Contexts/SweatContext'
 import TeamProfile from "./TeamProfile/TeamProfile";
+import Login from "./Login/Login";
 
 export const SweatContext = createContext();
 
@@ -23,6 +24,7 @@ function App() {
             <Navbar />
             <Routes>
             <Route path="/" element={<Home />}/>
+            <Route path="/login" element={<Login />}/>
             <Route path="/team/:id" element={<TeamProfile />}/>
             </Routes>
           </BrowserRouter>

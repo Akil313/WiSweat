@@ -2,6 +2,7 @@ import React from 'react'
 import "./Navbar.css"
 import { MdOutlineMenu } from "react-icons/md";
 import styled from 'styled-components'
+import { Link } from 'react-router-dom'
 
 const NavBarContainer = styled.div`
   background-color: ${props => props.theme.primary};
@@ -18,7 +19,7 @@ const Navbar = () => {
     <NavBarContainer>
       <MdOutlineMenu size={35}/>
       <strong>WiSweat</strong>
-      <button>Login</button>
+      <Link to="/login"><button>Login</button></Link>
     </NavBarContainer>
   )
 }
