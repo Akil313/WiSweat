@@ -1,11 +1,11 @@
-import React from 'react'
-import "./Navbar.css"
+import React from "react";
+import "./Navbar.css";
 import { MdOutlineMenu } from "react-icons/md";
-import styled from 'styled-components'
-import { Link } from 'react-router-dom'
+import styled from "styled-components";
+import { Link } from "react-router-dom";
 
 const NavBarContainer = styled.div`
-  background-color: ${props => props.theme.primary};
+  background-color: ${(props) => props.theme.primary};
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -17,11 +17,16 @@ const NavBarContainer = styled.div`
 const Navbar = () => {
   return (
     <NavBarContainer>
-      <MdOutlineMenu size={35}/>
+      <MdOutlineMenu size={35} />
       <strong>WiSweat</strong>
-      <Link to="/login"><button>Login</button></Link>
+      <Link to="/">
+        <button>Home</button>
+      </Link>
+      <Link to="/login">
+        <button>Login</button>
+      </Link>
     </NavBarContainer>
-  )
-}
+  );
+};
 
-export default Navbar
+export default Navbar;
