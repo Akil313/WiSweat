@@ -7,17 +7,25 @@ router.route("/").get((req, res) => {
     .catch((err) => res.status(400).json("Error: " + err));
 });
 
-router.route("/create").post((req, res) => {
-  const username = req.body.user;
-  const fullName = req.body.name;
+router.route("/add").post((req, res) => {
+  console.log("TEST");
+  const username = req.body.username;
+  const fullName = req.body.fullName;
   const email = req.body.email;
   const position = req.body.position;
 
-  const newSweat = new Sweat({ name, teamId, startTime, loc, attending });
+  const newUser = new User({
+    username,
+    fullName,
+    email,
+    position,
+  });
 
-  newSweat
+  newUser.setPassword(req.body.password);
+
+  newUser
     .save()
-    .then(() => res.json("Sweat Created"))
+    .then(() => res.json("User Created"))
     .catch((err) => res.status(400).json("Error: " + err));
 });
 
