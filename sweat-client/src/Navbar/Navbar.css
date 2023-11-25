@@ -1,9 +1,0 @@
-.nav-main-container{
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    min-height: 5vh;
-    background-color: aqua;
-    padding-left: 30px;
-    padding-right: 30px;
-}
