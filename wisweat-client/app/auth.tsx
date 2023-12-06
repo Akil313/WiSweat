@@ -1,9 +1,19 @@
 import NextAuth from "next-auth";
-import Credentials from "next-auth/providers/credentials"
+import Google from "next-auth/providers/google"
 
 export const {
   handlers,
   auth,
 } = NextAuth({
-  providers: [Credentials]
+  providers: [Google({
+    clientId: process.env.GOOGLE_CLIENT_ID,
+    clientSecret: process.env.GOOGLE_CLIENT_SECRET
+  }),
+  ],
+  callbacks: {
+    async signIn({ account, profile }) {
+      console.log(profile)
+      return true
+    }
+  }
 })

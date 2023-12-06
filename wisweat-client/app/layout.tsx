@@ -33,7 +33,7 @@ export default function RootLayout({
             </div>
           </AuthProvider>
         </ThemeProvider>
-        UserProvider</body>
+      </body>
     </html>
   )
 }
