@@ -5,6 +5,7 @@ import { ThemeProvider } from './components/theme-provider'
 import Header from './components/Header'
 import Footer from './components/Footer'
 import { UserProvider } from 'contexts/UserContext'
+import AuthProvider from 'contexts/AuthProvider'
 
 const inter = Inter({ subsets: ['latin'] })
 
@@ -22,7 +23,7 @@ export default function RootLayout({
     <html lang="en">
       <body className={` min-h-screen bg-white dark:bg-slate-950 text-slate-950 dark:text-slate-50 ${inter.className}`}>
         <ThemeProvider attribute='class' defaultTheme='system' enableSystem>
-          <UserProvider>
+          <AuthProvider>
             <Header />
             <div className='max-w-6xl mx-auto py-10 px-4'>
               <main>
@@ -30,9 +31,9 @@ export default function RootLayout({
               </main>
               <Footer />
             </div>
-          </UserProvider>
+          </AuthProvider>
         </ThemeProvider>
-      </body>
+        UserProvider</body>
     </html>
   )
 }

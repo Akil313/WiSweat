@@ -26,11 +26,15 @@ const create_sweat = async (req, res) => {
 };
 
 const get_all_sweats = async (req, res) => {
-  const all_sweats = await Sweat.find({});
+  try {
+    const all_sweats = await Sweat.find({});
 
-  console.log(all_sweats);
+    console.log(all_sweats);
 
-  res.status(200).send(all_sweats);
+    res.status(200).send(all_sweats);
+  } catch (err) {
+    res.send({ message: `The error is ${err}` });
+  }
 };
 
 const flush_sweats = async (req, res) => {
