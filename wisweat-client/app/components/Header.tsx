@@ -14,7 +14,7 @@ const Header = () => {
     <>
       <header className='flex w-full items-center px-6 justify-between bg-green-500'>
         <LiaBarsSolid size='2em' />
-        <Link href={"/api/auth/signin"}>
+        <Link href={"/"}>
           <div>
             WiSweat
           </div>
